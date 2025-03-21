@@ -1,0 +1,1143 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 10px;
+}
+li,a,input{
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+}
+/* 黑色导航条开始*/
+.nav{
+    box-sizing: border-box;
+    min-width: 1200px;
+    /* border: 1px solid blue; */
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    background-color:rgb(50,50,50);
+    font-size: 1.2rem;
+    /* overflow: hidden; */
+}
+
+/* 白色导航条下拉界面开始 */
+
+.pull-down{
+    box-sizing: border-box;
+    width: 100%;
+    /* max-width: 100%; */
+    /* width: calc(100%-22px); */
+    position: absolute;
+    top:13.9rem;
+    /* left: 20px; */
+    height: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 0.1rem 0.2rem #e0e0e0;
+    border-left: none;
+    visibility: hidden; 
+    overflow: hidden;
+    /* display: none; */
+    transition: height 0.5s ease;
+}
+.pull-down>div{
+    width: 80%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    /* border: 1px solid rebeccapurple; */
+}
+
+.pull-down>div>div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    /* border: 1px solid gray; */
+    text-align: center;
+    
+}
+.pull-down>div>div>img{
+    width: 15rem;
+    margin-bottom: 0.5rem;
+    padding-right: 2rem;
+    border-right: 2px solid #e0e0e0;
+}
+#Xiaomi-MIX-Flip,#Redmi-Note-14Pro,#RedmiA,#RedmiBook,#XiaomiPad,#mi203L,#findAll{
+    border-right: none;
+}
+.pull-down>div>div>span,.pull-down>div>div>strong{
+    height: 2rem;
+}
+.pull-down>div>div>strong{
+    color: rgb(255,106,0);
+    font-weight: 500;
+}
+/* 白色导航条下拉界面结束 */
+/* 黑色导航条下载app下拉二维码开始 */
+#downloadAPP{
+    position: relative;
+}
+.QRCode{
+    position: absolute;
+    top:100%;
+    left: -50%;
+    width: 230%;
+    height: 14.5rem;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    box-shadow: -0.2rem 0.2rem 0.2rem #e0e0e0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.QRCode>img{
+    width: 70%;
+    margin-bottom: 1rem;
+}
+/* 黑色导航条下载app下拉二维码结束 */
+/* 黑色导航条下拉购物车开始 */
+#shoppingCar{
+    position: relative;
+    background-color: rgb(66,66,66);
+}
+.shoppingCar-pulldown{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300%;
+    height: 10rem;
+    line-height: 10rem;
+    background-color: white;
+    box-shadow: -0.2rem 0.4rem 2rem #e0e0e0;
+    z-index: 100;
+    visibility: hidden;
+    overflow: hidden;
+}
+/* 黑色导航条下拉购物车结束 */
+
+
+.nav>div{
+    width: 80.5%;
+    max-width: 1440px;
+    min-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.nav li:hover>a{
+    color: white;
+}
+.nav .nav-left{
+    flex:3.1;
+    display: flex;
+    justify-content: space-between;
+}
+.nav .nav-right{
+    flex: 1.8;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav .nav-right>li{
+    margin-left: 20px;
+}
+
+.nav .nav-right>li:last-child{
+    height: 4rem;
+    width: 25%;
+    text-align: center;
+    background-color: #333;
+}
+.nav>div>ul>li>a,.nav>div>ul>li>i{
+    color: rgb(176,176,176);
+}
+.nav>div>ul>li>i{
+    margin-right: 5px;
+}
+/* 黑色导航条结束 */
+
+/* .container1{
+    width: 100%;
+    min-width: 1440px;
+    box-sizing: border-box;
+    border: 1px solid red;
+} */
+ .container1{
+    border-bottom: 7.8rem solid white;
+    box-sizing: border-box;
+ }
+.main{
+    position: relative;
+    width: 80.5%;
+    max-width: 1440px;
+    min-width: 1200px;
+    height: 71rem;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 8.5rem; */
+    /* border: 1px solid red; */
+}
+/* .main>div{
+    
+    border: 1px solid green;
+} */
+ /* 白色导航条一行开始 */
+.top{
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* .top>div{
+    border: 1px solid blue;
+} */
+ /* 左上角小米图标开始 */
+.top-left{
+    flex: 1;
+    margin-bottom: 1rem;
+}
+.top-left>img{
+    height: 5.5rem;
+    margin-top: 1rem;
+}
+/* 左上角小米图标结束 */
+/* 白色导航条开始 */
+.top-center{
+    height: 100%;
+    flex: 3;
+}
+.top-center>ul{
+    height: 100%;
+    padding-right: 7rem;
+    display: flex;
+    justify-content: space-between;
+}
+.top-center>ul>li{
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.top-center>ul>li:hover{
+    cursor: pointer;
+}
+.top-center>ul>li:hover>a{
+    color: rgb(255,106,0);
+}
+.top-center>ul>li>a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding-top: 6rem;
+    color: black;
+    font-size: 1.6rem;
+}
+/* 白色导航条结束 */
+/* 搜索框开始 */
+.top-right{
+    height: 60%;
+    flex: 1.2;
+    display: flex;
+
+}
+.top-right>input{
+    flex:5;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    position: relative;
+    padding-left: 1rem;
+}
+/* 点击搜索框下拉列表开始 */
+.search-content{
+    background-color: white;
+    border: 1px solid rgb(255,106,0);
+    border-top: none;
+    height: 25rem;
+    position: absolute;
+    top:10.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    z-index: 99;
+    visibility: hidden; /* 默认隐藏 */
+    overflow: hidden;
+}
+.search-content>div{
+    width: 95%;
+    margin-left: 5%;
+    font-size: 1.2rem;
+    color:rgb(51, 51, 51);
+}
+/* 点击搜索框下拉列表结束 */
+.top-right>button{
+    flex: 1;
+    background-color: white;
+    border: 0.25px solid #e0e0e0;
+}
+.top-right>button:hover,.top-right>button:hover>i{
+    background-color: rgb(255,106,0);
+    cursor: pointer;
+    color: white;
+}
+.top-right>button>i{
+    font-size: 2rem;
+    color: #616161;
+}
+/* 搜索框结束 */
+/* 白色导航条一行结束 */
+.center{
+    flex-grow: 4;
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+.center>div{
+    /* border: 1px solid blue; */
+    height: 100%;
+}
+/* 左侧黑色导航开始 */
+.center-left{
+    height: 100%;
+    flex: 1;
+    background-color: rgba(105, 101, 101, 0.6);
+    z-index: 2;
+    /* border: 1px solid yellow; */
+}
+.center-left>ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    padding-top: 2rem;
+    padding-bottom: 2.2rem;
+}
+.center-left>ul>li{
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+    /* border: 1px solid yellow; */
+}
+.center-left>ul>li>a{
+    height: 4.2rem;
+    line-height: 4.2rem;
+    color: white;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.center-left>ul>li:hover,.center-left>ul>li:hover i{
+    background-color: rgb(255,106,0);
+    color: rgb(255,200,161);
+}
+/* 左侧黑色导航条结束 */
+/* 左侧黑色导航条悬浮界面开始 */
+.center-right>section{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 100;
+    box-shadow: 0.2rem 0.6rem 1rem #999;
+    /* border: 1px solid red; */
+}
+.center-right>section>section{
+    flex: 1;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+}
+.center-right>section>section>div{
+    flex: 1;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.center-right>section>section>div>img{
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    width: 19%;
+}
+.center-right>section>section>div>span{
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+}
+/* 第三行会报一个错，但能产生效果，可能是版本或插件冲突问题 */
+/* #overflowWord{
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+} */
+ /* 单行文本溢出方法 */
+#overflowWord {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 多行文本溢出效果 */
+/* #overflowWord {
+    display: block;
+    overflow: hidden;
+    line-clamp: 1;
+} */
+.blank1,.blank2,.blank3{
+    height: 100%;
+    background-color:white;
+}
+.blank1{
+    width: 10%;
+}
+.blank2{
+    width: 18%;
+}
+.blank3{
+    width: 30%;
+}
+/* 左侧黑色导航条悬浮界面结束 */
+
+/* 右侧轮播图开始 */
+.center-right{
+    flex: 4.3;
+    position: relative;
+    /* overflow: hidden; */
+    /* z-index: 1000; */
+    /* display: none; */
+}   
+.center-right>img{
+    width: 123.5%;
+    height: 46.2rem;
+    position: absolute;
+    transform: translateX(-19%);
+    /* display: none; */
+    /* opacity: 0.4; */
+    visibility: hidden;
+    transition: opacity 1.5s ease;
+}
+.center-right>img:hover{
+    cursor: pointer;
+}
+#carousel1{
+    /* display: block; */
+    opacity: 1;
+    visibility: visible;
+}
+.dotAll{
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    right: 4rem;
+}
+.dotAll>div{
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    border: 2px solid #fff;
+    z-index: 100;
+    opacity: 0.7;
+}
+.dotAll>div:hover{
+    cursor: pointer;
+}
+#dot1{
+    background-color: #fff;
+}
+.flipIcon{
+    position: absolute;
+    width: 4rem;
+    height: 7.5rem;
+    line-height: 7rem;
+    background-image: url("../img/icon-slides.png");
+    top: 42%;
+}
+#left-flip{
+    left: 0; 
+    background-position: 66%;
+}
+#left-flip:hover{
+    background-position: 0;
+    cursor: pointer;
+}
+#right-flip{
+    right: 0;
+    background-position: 100%;
+}
+#right-flip:hover{
+    background-position: 34%;
+    cursor: pointer;
+}
+/* 右侧轮播图结束 */
+
+/* .carousel{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/2e389157059c44d9352b42e04407cbb7.jpg");
+    background-size: cover;
+    background-position: -18rem;
+} */
+
+.bottom{
+    flex-grow: 1.5;
+    display: flex;
+    /* max-height: 100rem; */
+}
+/* .bottom>div{
+    border: 1px solid orange;
+} */
+ /* 底部左侧用户服务开始 */
+.bottom-left{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    background-color: #5f5750;
+    padding-top: 2rem;
+}
+.bottom-left>div{
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid pink; */
+    color: rgb(176,176,176);
+    margin-bottom: 2rem;
+}
+.bottom-left>div>img{
+    width: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+.bottom-left>div:hover,.bottom-left>div:hover>img{
+    cursor: pointer;
+    color: white;
+    opacity: 1;
+}
+/* 底部左侧用户服务结束 */
+/* 右侧广告图开始 */
+.bottom-right{
+    flex: 4.3;
+    display:flex ;
+    justify-content: space-between;
+}
+.bottom-right>img{
+    width: 31.5%;
+    margin-left: 1.5rem;
+}
+.bottom-right>img:hover{
+    cursor: pointer;
+    box-shadow: 0.1rem -0.1rem 3rem #e0e0e0;
+}
+/* 右侧广告图结束 */
+/* 第二个容器开始 */
+.container2{
+    width: 100%;
+    box-sizing: border-box;
+    /* margin-top: 8.5rem; */
+    background-color: rgb(245, 245, 245);
+    /* padding-top: 2rem; */
+    min-height: 549rem;
+}
+.main2{
+    margin: 0 auto;
+    width: 80.5%;
+    max-width: 1440px;
+    min-width: 1200px;
+    /* padding-bottom: 2rem; */
+    /* height:548rem; 不设置这个高度让盒子由内部的元素高度挤开解决了盒子缩放高度不够导致下面的盒子上缩的问题*/
+    /* 把高度设成600rem会加剧centerAd的高度比子元素高出一截的问题，但不会出现缩小后container3上移的问题，设成550rem则会出现 */
+    /* min-height: 550rem;
+    max-height: 600rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-start; */
+}
+.main2>section{
+    width: 100%;
+    /* flex: 0.5; */
+    /* border: 1px solid red; */
+}
+.main2>section:hover{
+    cursor: pointer;
+}
+.main2>div{
+    width: 100%;
+    /* max-height: 70rem; */
+    /* min-height: 50rem; */
+    /* 设了这个最小高度之后页面缩小时至少每个广告栏之间的间隔还在，并且container2的高度不会往上缩，导致container3的元素上移 */
+    /* 有一些间隔不在，有一些还在 */
+    /* flex: 3; /*把弹性元素的大小分配取消掉之后成功解决了centerAd的高度比子元素大出一截的问题*/
+    /* border: 1px solid blue; */
+    /* margin-bottom: 4rem; */
+    /* overflow: hidden; */
+    /* 设完这个之后缩放间隔也都能出来了 */
+    /* 不行啊，右边的区域随着页面缩小也会被拉长，会被隐藏住 */
+    /* 现在的问题就在于页面缩小之后元素高度被拉长 */
+}
+/* 第二个容器顶部广告和底部广告开始 */
+.main2 .topAd{
+    background-color: white;
+    /* border: 1px solid red; */
+    border-top: 2rem solid rgb(245, 245, 245);
+}
+.main2 .bottomAd{
+    border-top: 2rem solid rgb(245, 245, 245);
+    /* border-bottom: 2rem solid rgb(245, 245, 245);    */
+    margin-bottom: 2rem;
+}
+.main2>section>img{
+    width: 100%;
+}
+/* 第二个容器顶部和底部广告结束 */
+
+/* 中间一系列广告开始 */
+/* .main2 .centerAd{
+    object-fit: cover;
+} */
+.main2 .centerAd>section{
+    height: 4%;
+    min-height: 6rem;
+    /* 又是一个最小高度,可以避免缩放元素间距的收缩 真的可以吗……(可以！) */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /* border: 1px solid gray; */
+}
+.main2 .centerAd>section>b{
+    font-size: 2.2rem;
+    font-weight: 100;
+}
+.main2 .centerAd>section span{
+    font-size: 1.5rem;
+    color: black;
+}
+.main2 .centerAd>section>a>div{
+    display: inline-block;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 50%;
+    background-color: #999;
+    color: white;
+    margin-left: 0.5rem;
+}
+#mobileAd>section>a:hover>span{
+    color: rgb(255,106,0);
+}
+.main2 .centerAd>section>a:hover>div{
+    background-color: rgb(255,106,0);
+}
+.main2 .centerAd>section>div>span{
+    display: inline-block;
+    margin-left: 2.5rem;
+    line-height: 2.5rem;
+    border-bottom: 2px solid rgb(245, 245, 245);
+}
+.main2 .centerAd>section>div>span:first-child{
+    color: rgb(255,106,0);
+    border-bottom: 2px solid rgb(255,106,0);
+}
+.main2 .centerAd>section>div>span:hover{
+    cursor: pointer;
+}
+.main2 .centerAd>div{
+    /* height: 88%; */
+    /* max-height: 60rem; */
+    /* border: 1px solid green; */
+    display: flex;
+    margin-bottom: 1rem;
+
+}
+.main2 .centerAd>div>div:first-child{
+    height: 97%;
+    margin-top: 1.6rem;
+    /* overflow: hidden; */
+    flex: 1;
+    /* border: 1px solid red; */
+}
+
+.main2 .centerAd>div>div:first-child>img{
+    /* margin-top: 1.6rem; */
+    width: 100%;
+    height: 100%;
+}
+.main2 .centerAd>div>div:last-child{
+    flex: 4;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid pink; */
+}
+.main2 .centerAd>div>div:last-child>div{
+    flex: 21%;
+    /* border: 1px solid black; */
+    background-color: white;
+    margin-left: 1.5rem;
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main2 .centerAd>div>div:last-child>div:last-child{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.main2 .centerAd>div>div:last-child>div>img{
+    margin-top: 2rem;
+    flex: 1;
+    width: 70%;
+}
+.main2 .centerAd>div>div:last-child>div>div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main2 .centerAd>div>div:last-child>div>div>span,.main2 .centerAd>div>div:last-child>div>div>strong{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.main2 .centerAd>div>div:last-child>div>div>strong>span{
+    text-decoration: line-through;
+    color: rgb(176, 176, 176);
+}
+.main2 .centerAd>div>div:last-child>div>div>b{
+    /* display: inline-block; */
+    font-size: 12px;
+    color: rgb(176, 176, 176);
+    font-weight: 200;
+    margin-top: 1rem;
+    text-align: center;
+}
+.main2 .centerAd>div>div:last-child>div>div>span,.main2 .centerAd>div>div:last-child>div>div>b{
+    width: 21rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.main2 .centerAd>div>div:last-child>div>div>strong{
+    color: rgb(255,106,0);
+    font-weight: 500;
+}
+/* 广告左边盒子分成两个开始 */
+/* .leftDevide{
+    display: flex;
+    flex-direction: column;
+}
+.leftDevide>section{
+    width: 100%; */
+    /* scale: 0.9; */
+    /* border: 1px solid red; */
+    /* margin-bottom: 1.6rem; */
+/* }
+.leftDevide>section:first-child{
+    flex: 0.8;
+    padding-top: 1.5rem;
+}
+.leftDevide>section:last-child{
+    flex: 1;
+    padding-bottom: 1.9rem;
+    /* border: 1px solid red; */
+/* }
+.leftDevide>section>img{
+    width: 100%;
+    height: 92%;
+    object-fit: cover;
+}
+.leftDevide>section:first-child>img{
+    height: 94%;
+} */ 
+
+/* .leftDevide>div{
+    margin: 0.8rem 0;
+    width: 100%;
+    height: 1.6rem;
+    background-color: rgb(245, 245, 245);
+    border: 1px solid blue;
+} */
+/* 广告左边盒子分成两个结束 */
+/* 广告最后一个盒子分成两个开始 */
+.main2 .centerAd .devideBox>div{
+    flex: 1;
+    width: 100%;
+    background-color: white;
+    /* border: 1px solid red; */
+}
+#devideBox1>div,#devideBox2>div,#devideBox3>div,#devideBox4>div,#devideBox5>div,#devideBox6>div{
+    display: flex;
+    flex-direction: row;
+}
+#devideBox1>section,#devideBox2>section,#devideBox3>section,#devideBox4>section,#devideBox5>section,#devideBox6>section{
+    width: 100%;
+    height: 1.6rem;
+    background-color: rgb(245, 245, 245);
+    /* border: 1px solid red; */
+}
+.main2 .centerAd .devideBox>div>div{
+    flex: 1;
+    height: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0.5rem;
+}
+
+.main2 .centerAd .devideBox>div>div:first-child{
+    /* border: 1px solid green; */
+    padding-left: 2.5rem;
+}
+.main2 .centerAd .devideBox>div>div>span{
+    display: block;
+    width: 10rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.main2 .centerAd .devideBox>div>div>strong{
+    color:rgb(255,106,0);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+.main2 .centerAd .devideBox>div>div>img{
+    width: 80%;
+}
+.main2 .centerAd .devideBox>div>div>h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+.main2 .centerAd .devideBox>div:last-child span{
+    color: rgb(176, 176, 176);
+}
+/* 广告最后一个盒子分成两个结束 */
+
+/* 广告最左边一个盒子分成两个开始 */
+/* .leftDevide{
+    border: 1px solid red;
+} */
+#leftDevide1>div,#leftDevide2>div,#leftDevide3>div,#leftDevide4>div{
+    flex: 18%;
+    max-height: 34rem;
+    /* 这个最大高度很关键 */
+    /* padding-bottom: 4rem; */
+}
+#leftDevide1>div:first-child,#leftDevide1>div:nth-child(6),#leftDevide2>div:first-child,#leftDevide2>div:nth-child(6),#leftDevide3>div:first-child,#leftDevide3>div:nth-child(6),#leftDevide2>div:nth-child(6),#leftDevide4>div:first-child,#leftDevide4>div:nth-child(6){
+    flex: 19%;
+    margin-left: 0;
+    /* padding-bottom: 0; */
+}
+/* #leftDevide1>div:last-child{
+    padding-bottom: 0;
+} */
+
+#leftDevide1>div:nth-child(1)>img,#leftDevide1>div:nth-child(6)>img,#leftDevide2>div:nth-child(1)>img,#leftDevide2>div:nth-child(6)>img,#leftDevide3>div:nth-child(1)>img,#leftDevide3>div:nth-child(6)>img,#leftDevide4>div:nth-child(1)>img,#leftDevide4>div:nth-child(6)>img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 给后面一些和下一个广告栏不够距离的广告栏加上距离 */
+/* .borderBottom{
+    border-bottom: 5rem solid rgb(245, 245, 245);
+} */
+/* 广告最左边一个盒子分成两个结束 */
+
+.leftHover:hover,.main2 .centerAd>div>div:last-child>div:hover:not(.centerAd>div>div:last-child>div:last-child),.main2 .centerAd .devideBox>div:hover{
+    cursor: pointer;
+    box-shadow: 0 10px 15px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.2rem)
+}
+/* 中间一系列广告结束 */
+
+/* 第二个容器结束 */
+
+/* 第三个容器开始 */
+.container3{
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+}
+.main3{
+    width: 80.5%;
+    height: 50rem;
+    max-width: 1440px;
+    min-width: 1200px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.main3-top{
+    flex: 0.5;
+    /* border: 1px solid blue; */
+    padding: 2rem 6rem;
+    display: flex;
+    border-bottom: 0.25px solid #e0e0e0;
+}
+.main3-center{
+    flex: 5;
+    /* border: 1px solid gray; */
+}
+/* 第三个容器顶部开始 */
+.main3-top>div{
+    flex: 1;
+    /* border: 1px solid pink; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main3-top>div>i{
+    font-size: 2.6rem;
+    opacity: 0.7;
+}
+.main3-top>div>span{
+    font-size: 1.6rem;
+    /* border: 1px solid red; */
+    padding: 0.5rem 1rem;
+    padding-right: 4.5rem;
+    opacity: 0.7;
+    border-right: 0.25px solid #e0e0e0;
+}
+#afterMarket{
+    border: none;
+}
+.main3-top>div:hover,.main3-center-left span:hover{
+    color: rgb(255,106,0);
+    cursor: pointer;
+}
+/* 第三个容器顶部结束 */
+/* 第三个容器中部开始 */
+/* 中部左边开始 */
+.main3-center{
+    display: flex;
+}
+.main3-center-left{
+    flex: 1 1 57.5%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-around;
+    padding: 0 8%;
+}
+.main3-center-right{
+    flex: 1 1 25%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    
+}
+.main3-center-left>div{
+    flex: 1;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.main3-center-left>div>section{
+    display: flex;
+    flex-direction: column;
+    padding: 25% 0;
+}
+.main3-center-left>div strong{
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+.main3-center span{
+    font-size: 1.2rem;
+    color: rgb(117, 117, 117);
+    margin-bottom: 1.2rem;
+}
+/* 中部左边结束 */
+/* 中部右边开始 */
+.main3-center-right>div{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   
+    /* border: 1px solid blue; */
+    margin-bottom: 2.3rem;
+}
+.main3-center-right>div:first-child{
+    border-left: 1px solid #e0e0e0;
+}
+
+.main3-center-right h1{
+    margin-left: 10rem;
+    color: rgb(255,106,0);
+    font-weight: 400;
+}
+.main3-center-right span{
+    margin-left: 6rem;
+}
+.main3-center-right button{
+    margin-left: 7.5rem;
+    width: 35%;
+    height: 3rem;
+    background-color: white;
+    color: rgb(255,106,0);
+    border: 1px solid rgb(255,106,0);
+    /* border: 1px solid rgb(255,106,0); */
+}
+.main3-center-right button:hover,.main3-center-right button:hover>i{
+    cursor: pointer;
+    background-color: rgb(255,106,0);
+    color: white;
+}
+.main3-center-right i{
+    color: rgb(255,106,0);
+}
+
+/* 中部右边结束 */
+/* 第三个容器中部结束 */
+/* 第三个容器结束 */
+/* 第四个容器开始 */
+.container4{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+}
+.main4{
+    width: 80.5%;
+    height: 22rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+    max-width: 1440px;
+    min-width: 1200px;
+}
+.main4>div{
+    display: flex;
+}
+.main4>div>img{
+    height: 5.5rem;
+}
+.main4>div>div{
+    margin-left: 2rem;
+}
+.main4>div>div>div:nth-child(1) a,.main4>div>div>div:nth-child(2) a{
+    display: inline-block;
+    color: rgb(117, 117, 117);
+    font-size: 1.2rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    border-right: 2px solid #b4b0b0;
+    padding-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.main4>div>div>div:nth-child(3) a,.main4>div>div>div:nth-child(4) a,.main4>div>div>div:nth-child(5) a,.main4>div>div>div:nth-child(6) a,.main4 span{
+    display: inline-block;
+    color: rgb(176, 176, 176);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+.small1{
+    width: 9rem;
+}
+.changeImg{
+    width: 7.5rem;
+}
+.main4>section{
+    margin: 3.8rem 35%;
+}
+.main4>div>div>div>a:hover{
+    color: rgb(255,106,0);
+}
+.main4 div img{
+    cursor: pointer;
+}
+/* 第四个容器结束 */
+
+#devideBox3:hover{
+    box-shadow: none;
+    transform: scale(1);
+}
+#noShadow1:hover{
+    box-shadow: none;
+    cursor:auto;
+}
+
+
+@media (min-width:1706px){
+    /* .main2{
+        height: 635rem;
+    } */
+}
+@media (min-width: 1450px) {
+    /* .main2{
+        height: 550rem;
+    } */
+}
+@media (min-width: 1400px) {
+    /* .main2{
+        height: 607rem;
+    } */
+}
+
+@media (min-width: 1200px) {
+    .nav {
+        font-size: 1.2rem; /*在大屏幕上保持字体大小*/
+    }
+    /* .main2{
+        height: 54rem;
+    } */
+    .top-center>ul>li>a{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    /* html{
+        font-size: 8px;
+    } */
+    .nav {
+        font-size: 1rem; /* 在中等屏幕上调整字体大小 */
+    }
+    /* .main2{
+        height: 618rem;
+    } */
+    .top-center>ul>li>a{
+        font-size: 1.2rem;
+    }
+    
+}
+@media (max-width: 1000px) {
+
+}
+@media (max-width: 768px) {
+    .nav {
+        font-size: 0.8rem; /* 在小屏幕上进一步调整字体大小 */
+    }
+    /* .main2{
+        height: 618rem;
+    } */
+}
