@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tdoList</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+<body>
+    <!-- 点击添加事件弹窗 -->
+    <div class="shade">
+        <form action="" class="addItem" id="englishForm">
+            <!-- 添加成功弹窗 -->
+             <section class="successAdd">Add successfully!</section>
+            <h1>Please enter the todoItem</h1>
+            <div>
+                
+                <label for="" style="margin-left: 2.2rem;">title:</label>
+                <input type="text" class="title">
+                <label for="" class="star" style="display: none;">*</label>
+            </div>
+            <div class="content">
+                <label for="">content:</label>
+                <textarea name="" id="" class="contentText"></textarea>
+            </div>
+            <div class="urgent">
+                <span class="urgentButton"></span>
+                <label for="">isUrgent</label>
+            </div>
+            <button class="add">add</button>
+        </form>
+ </div>
+    <!-- 首页 -->
+    <div class="container english">
+        <h1>
+            <div class="pendulum">
+                <div class="fix">
+                    <div class="tack"></div>
+                </div>
+                <div class="swing">
+                    <div class="string"></div>
+                    <div class="weight"></div>
+                </div>
+            </div>
+            T O D O
+            <div class="square">
+                <div class="rotate1"></div>
+                <div class="rotate1"></div>
+            </div>
+            <span class="time" id="firstTime"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <div class="language Chinese">Chinese</div>
+            <span>/</span>
+            <div class="language English highLight">English</div>
+        </h1>
+        <div>
+            <main>
+                <div class="header">
+                    <span class="finishAll">finishAll</span>
+                    <span class="deleteAll pullDown">deleteAll</span>
+                    <span class="removeAll" style="display: none;">recoverAll</span>
+                    <i class="iconfont icon-zengjia"></i>
+                    <div>
+                        <i class="iconfont icon-line-right icon-icon-line-right"></i>
+                        <input type="text" class="searchInput" placeholder="Please enter the title">
+                        <i class="iconfont icon-sousuo_huaban1"></i>
+                        <i class="iconfont icon-caidan open"></i>
+                    </div>
+                </div>
+                <div class="main todoList home">
+                    <section class="detailContent">
+                        <section class="close">×</section>
+                        <div class="Title">
+                            <span>title:</span>
+                        </div>
+                        <div class="Content">
+                            <span>content:</span>
+                        </div>
+                    </section>
+                </div>
+                <!-- 使用说明 -->
+                <div class="tips" style="display: none;">
+                    <div>
+                        <i class="iconfont icon-caozuoruanjian-02"></i><span>The home page and the recycle bin page can export the notes respectively</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-liulanqi"></i><span>All of the notes are stored in the browser locally</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-chaxun1"></i><span>Support query function</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-huanyuan"></i><span>Click on the menu bar on the right for a shortcut</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-shuxieicon"></i><span>Double-click the modified title to enter the details page to modify the content</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-wodetijiao"></i><span>All submissions support Enter key missions</span>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <h2>User Guide </h2>
+                </div>
+            </main>
+            <!-- 侧栏 -->
+            <nav class="nav">
+                <a href="" id="goToDoList">all</a>
+                <a href="" id="goBin">bin</a>
+                <a download="" href="" id="download">downloadData</a>
+                <!-- <a href="">导入数据</a> -->
+            </nav>
+        </div>
+    </div>
+    
+    <script src="./js/style.js"></script>
+</body>
+</html>
