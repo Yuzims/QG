@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+<body>
+    <!-- 提示弹窗 -->
+     <div class="alertShade">
+        <div class="loaded">上传成功</div>
+        <div class="loadErr">上传失败</div>
+        <div class="serverResErr">服务器响应错误</div>
+        <div class="layerEmpty">当前工作区中存在空层级，无法再增加层级</div>
+        <div class="repeatModel">当前层级中已有该模型</div>
+        <div class="noModel">当前工作台中没有模型，请添加模型</div>
+        <div class="overContainer">已达到最大层级添加容量</div>
+     </div>
+    <div class="container">
+        <!-- 左边模型库 -->
+        <div class="left">
+            <div class="modelTitle">
+                <span>模型库</span>
+                <div>
+                    <i class="iconfont icon-zengjia"></i>
+                    <i class="iconfont icon-shanchu deleteModel"></i>
+                </div>
+            </div>
+            <div class="operation">
+                <span class="addLayer">增加层级</span>
+                <span class="upload">上传</span>
+            </div>
+            <div class="models"></div>
+        </div>
+        <!-- 右边工作台 -->
+        <div class="right"></div>
+        <!-- 点击模型库的加号添加模型 -->
+         <div class="shade addModelShade" style="display: none;">
+            <div class="addModel">
+                <form action="" class="addModelForm">
+                    <label for="">模型名称:</label>
+                    <input type="text" class="modelNameInput"></br>
+                    <span class="modelNameErr">模型名称不能为空</span>
+                    <label for="">模型url:</label>
+                    <input type="text" class="modelUrlInput"></br>
+                    <span class="modelUrlErr">模型url不能为空</span>
+                    <span class="existingModelErr">已存在该模型</span>
+                    <span class="urlFormatErr" style="visibility:visible;display:none;">路径格式错误</span>
+                    <div>
+                        <label for="">模型简介:</label>
+                        <textarea name="" id="" class="modelIntroInput"></textarea>
+                    </div>
+                    <span class="modelIntroErr">模型简介不能为空</span>
+                    <section class="addModelButton">
+                        <button class="cancelAddModelShade">取消</button>
+                        <!-- <input type="submit" class="sureAddModelShade" value=""> -->
+                        <button class="sureAddModelShade">确认</button>
+                    </section>
+                    
+                </form>
+            </div>
+         </div>
+        <!-- 点击工作台层级中的模型弹出添加信息（权重、提示词）弹窗 -->
+        <div class="shade addMessageShade" style="display: none;">
+            <div class="addMessage">
+                <form action="">
+                    <i class="iconfont icon-quanzhong"></i>
+                    <label for="" style="padding-left: 1rem;">权重：</label>
+                    <input type="text" name="weight" class="weight" value="1"></br>
+                    <span class="weightErr">权重不能为空</span>
+                    <i class="iconfont icon-tishi1"></i>
+                    <label for="">提示词：</label>
+                    <input type="text" name="question" class="question">
+                    <div class="button">
+                        <button class="cancelAddMessage">取消</button>
+                        <input type="submit" value="确认" class="sureAddMessage">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- 点击上传之后右侧出现侧边弹窗 -->
+        <div class="shade runMessageShade" style="display: none;">
+            <div class="runMessage">
+                <div class="runMessageHeader">
+                    <i class="iconfont icon-delete cancelRunMessageShade"></i>
+                    <span>运行项目</span>
+                    <div>
+                        <button class="cancelRunMessageShade">取消</button>
+                        <button class="runProject">运行</button>
+                    </div>
+                </div>
+                <form action="" class="runMessageForm">
+                    <label for="">项目名称</label>
+                    <input type="text" class="projectNameInput">
+                    <span class="projectNameErr">请输入项目名称</span>
+                    <label for="">请输入文本</label>
+                    <input type="text" class="projectQuestionInput">
+                    <label for="">上传图片</label>
+                    <div class="imgBox">
+                        <i class="iconfont icon-shangchuantupian uploadImg"></i>
+                        <input type="file" class="uploadImgInput" style="display: none;" multiple>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
