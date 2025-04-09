@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+
+}
+html{
+    font-size: 10px;
+}
+input{
+    padding-left: 1rem;
+}
+body{
+    background-color: #c0bec8;
+}
+
+/* 首页开始 */
+.container{
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: 0 30%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.container>h1{
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    margin: 3rem 0;
+    margin-left: 25%;
+    color: #532a4b;
+    display: flex;
+    align-items: center;
+}
+.pendulum{
+    width: 3.5rem;
+    margin-right: 2rem;
+    position: relative;
+}
+.swing{
+    width: 100%;
+    animation: pendulum 2s linear infinite running;
+    transform-origin: 50% 0.4rem;
+    transition: all 0.5s linear;
+    margin-top: 0.2rem;
+    position: relative;
+    z-index: 1;
+}
+@keyframes pendulum{
+    0%{
+        transform: rotate(0);
+    }
+    25%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(0);
+    }
+    75%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+.fix{
+    position: absolute;
+    left: 29%;
+    width: 1.5rem;
+    height: 1.7rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #9f7a86;
+    z-index: 0;
+    border: 0.2rem solid #532a4b;
+}
+.tack{
+    margin: 0.4rem auto;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: rgb(101, 25, 72);
+    transform: rotate(50deg);
+    z-index: 100;
+    border: 0.2rem solid #532a4b;
+}
+.string{
+    margin: 0 auto;
+    height: 3rem;
+    width: 0.2rem;
+    background-color: rgba(14, 13, 13, 0.5);
+    
+}
+.weight{
+    margin: 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(190, 155, 162);
+    border: 0.2rem solid #532a4b;
+}
+.square{
+    width: 4.1rem;
+    height: 2rem;
+    /* background-color: black; */
+    display: flex;
+}
+.square div{
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: rgb(151, 109, 118);
+    transform: rotate(60deg);
+    transition: all 0.5s;
+    border: 0.2rem solid #532a4b;
+}
+
+/* 时间和语言开始 */
+.container>h1>span,.container>h1>div{
+    font-size: 1.4rem;
+    font-weight: 500;
+    
+}
+#firstTime,.Chinese{
+    margin-left: 2rem;
+}
+.highLight{
+    color: #d283c3;
+}
+
+.language{
+    margin-right: 0.5rem;
+}
+.language:hover{
+    cursor: pointer;
+}
+/* 时间和语言结束 */
+.container>div{
+    width: 100%;
+    /* border: 1px solid blue; */
+    margin: 0 auto;
+    display: flex;
+}
+main{
+    width: 55rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    min-height: 40rem;
+    box-shadow: 1rem 1rem 1rem #786073;
+    background-color: #aeaaba;
+}
+.header{
+    width: 100%;
+    height: 5rem;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    position: relative;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid#935887;
+}
+.header span{
+    width: 10rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.4rem;
+    text-align: center;
+    /* border: 1px solid yellow; */
+    background-color: #786073;
+    border-radius: 4px;
+    z-index: 1;
+    color: #c2b9c0;
+}
+.header span:hover{
+    background-color: #a5899f;
+    color: #0e040c;
+}
+.header span:hover,.header i:hover,.shade button:hover,.urgentButton:hover,.click:hover,.icon-shenglve:hover,.icon-shanchu:hover
+,.close:hover{cursor: pointer;}
+.deleteAll,.recoverAll{
+    display: none;
+    position: absolute;
+    top: 4.9rem;
+    left: 0;
+    border-top: 1px solid #78476e;
+    border-top-left-radius:0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius: 3px;
+}
+.header i{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #856066;
+}
+.header i:hover{
+    color: rgb(208, 205, 206);
+}
+.header>div{
+    height: 100%;
+    flex: 1 1 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+.header .icon-icon-line-right{
+    display: none;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    position: absolute;
+    top: 1rem;
+    right: 7.5rem;
+}
+.header input{
+    width: 16rem;
+    display: none;
+    height: 3rem;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid#935887;
+    border-right: none;
+}
+.main,.tips,.searchContent{
+    width: 85%;
+    margin: 3rem auto;
+    /* border: 1px solid #96648c; */
+    padding: 2rem 1.5rem;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: 10px;
+}
+.tips h2{
+    color: #583551;
+}
+.tips>div{
+    height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.tips span{
+    font-size: 1.4rem;
+    /* text-indent: 2rem; */
+    color: #522048;
+}
+.tips i{
+    font-size: 2rem;
+    color: #48163f;
+    /* color: #71666f; */
+    margin-right: 1rem;
+}
+.tips .icon-wodetijiao{
+    color: rgb(195, 220, 235);
+}
+.tips .icon-shuxieicon{
+    color: rgb(120, 94, 94);
+}
+.tips .icon-huanyuan{
+    color: rgb(162, 133, 133);
+}
+.tips .icon-chaxun1{
+    color: rgb(139, 103, 34);
+}
+.tips .icon-liulanqi{
+    color: #666884;
+}
+.tips .icon-caozuoruanjian-02{
+    color: rgb(129, 109, 38);
+}
+.main{
+    position: relative;
+}
+.main>div,.searchContent>div{
+    font-family: "宋体";
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    border: 3px solid rgb(136, 117, 117);
+    box-shadow: 0.5rem 1rem 0.5rem rgb(134, 113, 113);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.main>div:hover,.searchContent>div:hover{
+    transform: translateY(-0.2rem);
+}
+.main>div>i,.searchContent>div>i{
+    font-size: 2rem;
+}
+.click{
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+.click:hover,.icon-shenglve:hover,.icon-shanchu:hover,.icon-fanhui:hover{
+    transform: scale(1.2);
+}
+.click:hover{
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(134, 113, 113);
+}
+.main .newTime,.searchContent .newTime{
+    width: 45%;
+    font-size: 1rem;
+
+}
+.icon-shenglve{
+    margin-right: 1rem;
+}
+.main>div>h3,.searchContent>div>h3{
+    width: 48%;
+    margin-left: 1rem;
+}
+.main .Urgent,.searchContent .Urgent{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    border: 1px solid rgb(219, 86, 9);
+    font-size: 1.4rem;
+    color: rgb(214, 106, 17);
+    margin-left: 0.5rem;
+}
+/* 详细内容 */
+.detailContent{
+    position: absolute;
+    top: 0;
+    left: 7rem;
+    width: 30rem;
+    min-height: 25rem;
+    border: 1px solid rgb(240, 213, 213);
+    box-shadow: 1rem 1rem 1rem rgb(136, 117, 117);
+    background-color: white;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+.detailContent>div{
+   width: 80%;
+   /* border: 1px solid red; */
+   padding: 2rem 0;
+}
+.detailContent span{
+    color: rgb(136, 117, 117);
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    border: 1px solid rgb(188, 166, 166);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.detailContent h3,.detailContent h4{
+    color: rgb(136, 117, 117);
+    text-indent: 1rem;
+}
+.close{
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    color: rgb(188, 166, 166);
+    border: 1px solid rgb(188, 166, 166);
+}
+.tips h2{
+    margin-bottom: 1rem;
+}
+.tips span{
+    line-height: 2rem;
+}
+/* 侧栏开始 */
+nav{
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+    /* border: 1px solid red; */
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+nav a{
+    font-size: 1.3rem;
+    color: rgb(138, 92, 92);
+    line-height: 3rem;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    border: 1px solid #5c4044;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: #856066;
+    color: #c1b7b9;
+    box-shadow: 0.5rem 0.5rem 1rem #8b6268;
+}
+nav a:hover{
+    background-color: #d99ba5;
+    box-shadow: 0 0 0 #5c4044;
+    color: #0e040c;
+}
+/* 侧栏结束 */
+/* 首页结束 */
+/* 添加事件界面开始 */
+.shade{
+    display: none;
+    width: 100%;
+    height: 72rem;
+    position: absolute;
+    background-color: rgba(215, 213, 213, 0.5);
+    /* border: 1px solid blue; */
+    z-index: 100;
+}
+.shade form{
+    width: 30rem;
+    height: 40rem;
+    margin: 0 auto;
+    margin-top: 11rem;
+    /* border: 1px solid ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+}
+
+.shade form>div{
+    width:  100%;
+    /* border: 1px solid rebeccapurple; */
+}
+
+.shade h1{
+    font-family: "宋体";
+    margin-bottom: 2rem;
+    color:rgb(131, 108, 108);
+}
+.shade label{
+    display: inline-block;
+    width: 6rem;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color:rgb(131, 108, 108);
+    text-align: right;
+    /* border: 1px solid rebeccapurple; */
+    margin-left: -1rem;
+}
+.shade .star{
+    width: 1rem;
+    margin-left: 0rem;
+}
+.title{
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+.shade [type="text"]{
+    width: 68%;
+    padding-left: 0.5rem;
+    border: 2px solid rgb(240, 213, 213);
+    color:rgb(131, 108, 108);
+}
+#englishForm [type="text"]{
+    width: 65%;
+}
+.content{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 0.4rem;
+}
+.content textarea{
+    width: 68%;
+    height: 10rem;
+    resize: vertical;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    border: 2px solid rgb(240, 213, 213);
+    color:rgb(131, 108, 108);
+}
+#englishForm textarea{
+    width: 65%;
+}
+.urgent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5rem;
+    margin-bottom: 2rem;
+}
+.urgentButton{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 1.5rem;
+    background-color: white;
+    border: 2px solid rgb(240, 213, 213);
+}
+.shade button{
+    width: 8rem;
+    height: 3rem;
+    background-color: rgb(240, 213, 213);
+    border: 0;
+    border-radius: 3px;
+    color:rgb(131, 108, 108);
+}
+.successAdd{
+    display: none;
+    width: 40%;
+    height: 4.5rem;
+    background-color: rgb(240, 213, 213);
+    border-radius: 5px;
+    position: absolute;
+    top: 26rem;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.4rem;
+}
+
+/* 添加事件界面结束 */
+@media (max-width:1440px){
+    html{
+        font-size: 9px;
+    }
+    .header .searchInput{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width:1200px){
+    html{
+        font-size: 7.5px;
+    }
+    
+}
+ @media (max-width:990px){
+    html{
+        font-size: 7px;
+    }
+    .container{
+        width: 80%;
+    }
+    .container h1{
+        margin-left: 20rem;
+    }
+    
+} 
+@media (max-width:680px){
+    html{
+        font-size: 6px;
+    }
+    .container{
+        width: 70%;
+    }
+    main{
+        width: 100%;
+    }
+    .header input{
+        width: 14rem;
+    }
+} 
+@media (max-width:576px){
+    html{
+        font-size: 3.5px;
+    }
+}
+

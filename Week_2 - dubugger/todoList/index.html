@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tdoList</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+</head>
+<body>
+    <!-- 点击添加事件弹窗 -->
+    <div class="shade">
+        <form action="" class="addItem">
+            <!-- 添加成功弹窗 -->
+             <!-- 这里改英文 -->
+             <section class="successAdd">添加成功</section>
+            <h1 class="pleaseAdd">请输入待办事件</h1>
+            <div>
+                <label for="" class="boxTitle">标题:</label>
+                <input type="text" class="title">
+                <label for="" class="star" style="display: none;">*</label>
+            </div>
+            <div class="content">
+                <label for="" class="boxContent">内容:</label>
+                <textarea name="" id="" class="contentText"></textarea>
+            </div>
+            <div class="urgent">
+                <span class="urgentButton"></span>
+                <label for="" class="isUrgent">是否加急</label>
+            </div>
+            <button class="add">添加</button>
+        </form>
+ </div>
+    <!-- 首页 -->
+    <div class="container">
+        <h1>
+            <div class="pendulum">
+                <div class="fix">
+                    <div class="tack"></div>
+                </div>
+                <div class="swing">
+                    <div class="string"></div>
+                    <div class="weight"></div>
+                </div>
+            </div>
+            T O D O
+            <div class="square">
+                <div class="rotate1"></div>
+                <div class="rotate1"></div>
+            </div>
+            <span class="time" id="firstTime"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <span class="time"></span>
+            <div class="language Chinese highLight">中</div>
+            <span>/</span>
+            <div class="language English">英</div>
+        </h1>
+        <div>
+            <main>
+                <div class="header">
+                    <span class="finishAll">全部标为完成</span>
+                    <span class="deleteAll pullDown">全部清除</span>
+                    <span class="removeAll" style="display: none;">全部恢复</span>
+                    <i class="iconfont icon-zengjia"></i>
+                    <div>
+                        <i class="iconfont icon-line-right icon-icon-line-right"></i>
+                        <input type="text" class="searchInput" placeholder="请输入笔记标题">
+                        <i class="iconfont icon-sousuo_huaban1"></i>
+                        <i class="iconfont icon-caidan open"></i>
+                    </div>
+                </div>
+                <div class="main todoList home">
+                    <section class="detailContent">
+                        <section class="close">×</section>
+                        <div class="Title">
+                            <span class="boxTitle">标题</span>
+                        </div>
+                        <div class="Content">
+                            <span class="boxContent">内容</span>
+                        </div>
+                    </section>
+                </div>
+                <!-- 使用说明 -->
+                <div class="tips" style="display: none;">
+                    <div>
+                        <i class="iconfont icon-caozuoruanjian-02"></i><span class="tip">首页和回收站页分别可以导出不同的笔记内容</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-liulanqi"></i><span class="tip">所有的笔记存储在浏览器本地</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-chaxun1"></i><span class="tip">支持查询功能</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-huanyuan"></i><span class="tip">右侧点开菜单栏有快捷操作</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-shuxieicon"></i><span class="tip">双击可修改标题，进入详情页可修改内容</span>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-wodetijiao"></i><span class="tip">所有提交操作支持Enter回车键提交</span>
+                    </div>
+                    <h2 class="tip">用户指南</h2>      
+                </div>
+                <!-- 搜索界面 -->
+                 <div class="searchContent" style="display: none;"></div>
+            </main>
+            <!-- 侧栏 -->
+            <nav class="nav">
+                <a href="" id="goToDoList">全部</a>
+                <a href="" id="goBin">回收站</a>
+                <a download="" href="" id="download">导出数据</a>
+                <!-- <a href="">导入数据</a> -->
+            </nav>
+        </div>
+    </div>
+    
+    <script src="./js/style.js"></script>
+</body>
+</html>
